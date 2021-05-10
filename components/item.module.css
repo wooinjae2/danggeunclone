@@ -1,0 +1,24 @@
+.item div{
+  padding: 3px;
+}
+
+.item_img img{
+    width: 200px;
+    height: 180px;
+    border-radius: 15px;
+}
+
+.item_title{
+    font-weight: bold;
+}
+
+
+.item_location{
+    color: #868e96;
+    font-size: 0.9rem;
+}
+
+.item_price{
+    color:coral;
+    font-weight: bold;
+}
