@@ -9,13 +9,15 @@ function header(){
             <div className={styles.header_left}>
                 <img src='/logo.svg'/>
                 <div>
-                <input type="text" placeholder="Search.." name="search"/>
+                <input className={styles.searchInput} type="text" placeholder="Search.." name="search"/>
                 <button type="submit"><i className="fa fa-search"></i></button>
                 </div>
             </div>
             <div>
-                <button className={styles.btn}>App Store</button>
-                <button className={styles.btn}>Google Play</button>
+                <button className={styles.btn}>
+                    <img style={{paddingRight: '7px'}} src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/apple-store-3a664174124650d63cae365bc55586fc5ff27b822b1b97788fc4af77d73d00c8.svg"></img>
+                    App Store</button>
+                <button className={styles.btn}><img style={{paddingRight: '7px'}} src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/google-play-c9ad0fc573cd01e2b982df5de6709a3d8d7cec8d9b58a5c08db7da0b92a32a75.svg"></img>Google Play</button>
             </div>
         </header>
         <div className={styles.recommend_list}>

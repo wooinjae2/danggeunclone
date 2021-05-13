@@ -1,0 +1,47 @@
+.item {
+    display: flex;
+    border-bottom: 1px solid #c0c4c9;
+}
+
+.item div{
+  padding: 3px;  
+  align-items: center;
+  overflow: hidden;
+}
+
+.item > div{
+    padding: 30px;  
+    
+  }
+
+.item_img img{
+    width: 150px;
+    height: 120px;
+    border-radius: 15px;
+    
+}
+
+.item_title{
+    font-weight: bold;
+}
+
+.descStyle{
+    width: 100%;
+    justify-self: end;
+    align-items: center;
+}
+
+
+.item_location{
+    color: #868e96;
+    width: 100%;
+    font-size: 0.9rem;
+    overflow:hidden; 
+    text-overflow:ellipsis; 
+    white-space:nowrap;
+}
+
+.item_price{
+    color:coral;
+    font-weight: bold;
+}
