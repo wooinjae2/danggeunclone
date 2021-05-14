@@ -3,11 +3,14 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Card from '../../components/Card';
 import Item from '../../components/item';
+import styles from './article.module.css';
 
 export default function articles() {
   const [data, setData] = useState({});
+  
   const [hotDataList, setHotDataList] = useState([]);
   const router = useRouter();
+  
 
   const { id } = router.query;
   console.log("id출력1 :", id);
@@ -28,14 +31,17 @@ export default function articles() {
   }, []);
 
   return (
-    <div>
-      <div className="img_section">
+    <div className={styles.article_wrapper}>
+      <div className={styles.img_section}>
         <div>left</div>
+        <div >
         <img src={`${data.src}`}></img>
+        </div>
+        
         <div>right</div>
       </div>
       <div className="user_info_section">
-        <div className="userInfo_left">
+        <div className={styles.userInfo_left}>
         <div><img src={`${data.src}`}></img></div>
         <div>단대민턴</div>
         <div>성남시 수정구 태평동</div>
