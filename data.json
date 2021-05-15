@@ -1,20 +1,20 @@
 { "articles": [
     { "id": 1,
-      "src": "/car.jpeg",
+      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
       "title": "자동차 입니다",
       "location": "경기도 군포시 당근동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "25,000원"
     },
     { "id": 2,
-      "src": "/bike.jpeg",
+      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
       "title": "자전거 입니다",
       "location": "경상북도 양산시 당근동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "30,000원"
     },
     {"id": 3,
-      "src": "/jordan.jpeg",
+      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
       "title": "조던 입니다",
       "location": "서울시 역삼동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
@@ -22,7 +22,7 @@
     },
     {
       "id": 4,
-      "src": "/jordan2.jpeg",
+      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
       "title": "조던 입니다",
       "location": "서울시 영등포구 당근동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
@@ -30,7 +30,7 @@
     },
     {
       "id": 5,
-      "src": "/applecar.jpeg",
+      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
       "title": "애플카 입니다",
       "location": "서울시 방배동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",

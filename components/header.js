@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import styles from './header.module.css';
 
 function header(){
@@ -7,10 +8,12 @@ function header(){
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <header className={styles.header}>
             <div className={styles.header_left}>
-                <img src='/logo.svg'/>
+                <Link href="/">
+                  <img src='/logo.svg'/>
+                </Link>
                 <div>
                 <input className={styles.searchInput} type="text" placeholder="Search.." name="search"/>
-                <button type="submit"><i className="fa fa-search"></i></button>
+                <button className={styles.searchButton} type="submit"><i className="fa fa-search"></i></button>
                 </div>
             </div>
             <div>
