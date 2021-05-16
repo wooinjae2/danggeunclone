@@ -1,12 +1,11 @@
 .content_section{
     width: 900px;
     margin: auto;
-    border: 1px solid #e9ecef;
+    
     border-radius: 5px;
-    padding: 30px;
+    padding: 0px;
     margin-top: 50px;
     background-color: white;
-    box-sizing: border-box;
 }
 
 .content_column{
@@ -19,6 +18,10 @@
     padding: 0px 30px 0px 30px;
 }
 
+.border {
+    border: 1px solid #e9ecef;
+}
+
 
 
 .content_column > div{
@@ -26,30 +29,35 @@
     margin: 15px;
 }
 
-.content_row {
-    margin-top: 5px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 0px 30px 0px 30px;
-}
-
 .title{
-    padding: 15px;
+    
     margin-left: 30px;
-    margin-top: 15px;
-    font-size: 1.2em;
-    font-weight: 900;
+    
+    
 }
 
 
 .more_btn{
     width: 100%;
-    border-top: 1px solid #cdd0d3;
+    border-top: 1px solid #868e96;
     margin: 0px;
     text-align: center;
     padding: 20px;
     color: #868e96;
+}
+
+
+.card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+
+.haeder_more{
+    font-size: 0.9em;
+    color:coral;
 }

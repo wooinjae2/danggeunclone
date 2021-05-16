@@ -24,9 +24,12 @@
 
 .header_left div input {
     border: 1px solid #868e96;
-    width: 300px;
+    width: 400px;
+}
+.header_left div input:focus{
     
 }
+
 
 .header_left div button {
     border: 1px solid #868e96;
@@ -63,9 +66,16 @@
 }
 
 .searchInput{
-    border-radius: 10px;
+    border-radius: 5px;
     border-left: none;
+    width:700px;
+    padding-left: 10px;
+    font-size:1.1em;
     margin-right: -30px;
+    
+}
+.searchInput:focus{
+    border-color: black;
 }
 
 .searchButton{
@@ -73,3 +83,4 @@
     background-color: transparent;
     border:none;
 }
+

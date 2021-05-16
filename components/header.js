@@ -12,7 +12,7 @@ function header(){
                   <img src='/logo.svg'/>
                 </Link>
                 <div>
-                <input className={styles.searchInput} type="text" placeholder="Search.." name="search"/>
+                <input className={styles.searchInput} type="text" placeholder="동네, 이름, 물품명 등을 검색해보세요!" name="search"/>
                 <button className={styles.searchButton} type="submit"><i className="fa fa-search"></i></button>
                 </div>
             </div>

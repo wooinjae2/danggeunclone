@@ -1,6 +1,7 @@
 .item {
     display: flex;
     border-bottom: 1px solid #c0c4c9;
+    cursor: pointer;
 }
 
 .item div{
