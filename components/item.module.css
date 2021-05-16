@@ -1,3 +1,7 @@
+.item{
+    cursor: pointer;
+}
+
 .item div{
   padding: 3px;
 }

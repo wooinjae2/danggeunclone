@@ -1,50 +1,63 @@
-{ "articles": [
-    { "id": 1,
-      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
+{
+  "articles": [
+    {
+      "id": 1,
+      "src": ["/car.jpeg", "/applecar.jpeg", "/car.jpeg", "/applecar.jpeg"],
       "title": "자동차 입니다",
       "location": "경기도 군포시 당근동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "25,000원",
-      "userId" : 1,
-      "userName" : "단대민턴"
+      "userId": 1
     },
-    { "id": 2,
-      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
+    {
+      "id": 2,
+      "src": ["/bike.jpeg", "/car.jpeg", "/jordan.jpeg", "/jordan2.jpeg"],
       "title": "자전거 입니다",
       "location": "경상북도 양산시 당근동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "30,000원",
-      "userId" : 2,
-      "userName" : "단대민턴2"
+      "userId": 2
     },
-    {"id": 3,
-      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
+    {
+      "id": 3,
+      "src": ["/jordan.jpeg", "/jordan2.jpeg", "/jordan.jpeg", "/jordan2.jpeg"],
       "title": "조던 입니다",
       "location": "서울시 역삼동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "44,444,000원",
-      "userId" : 3,
-      "userName" : "단대민턴3"
+      "userId": 3
     },
     {
       "id": 4,
-      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
+      "src": [
+        "/jordan2.jpeg",
+        "/jordan.jpeg",
+        "/jordan2.jpeg",
+        "/jordan2.jpeg"
+      ],
       "title": "조던 입니다",
       "location": "서울시 영등포구 당근동",
-      "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
+      "desc": "경기도 군포시 당근동경기도 군포시 당근동 경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "20,000원",
-      "userId" : 1,
-      "userName" : "단대민턴4"
+      "userId": 4
     },
     {
       "id": 5,
-      "src": ["/bike.jpeg","/car.jpeg","/jordan.jpeg","/jordan2.jpeg"],
+      "src": ["/applecar.jpeg", "/car.jpeg", "/applecar.jpeg", "/car.jpeg"],
       "title": "애플카 입니다",
       "location": "서울시 방배동",
       "desc": "경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동경기도 군포시 당근동",
       "price": "300,000원",
-      "userId" : 1,
-      "userName" : "단대민턴5"
+      "userId": 5
     }
+  ],
+  "users": [
+    { "id": 1, "userName": "홍길동1", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  },
+    { "id": 2, "userName": "홍길동2", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  },
+    { "id": 3, "userName": "홍길동3", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  },
+    { "id": 4, "userName": "홍길동4", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  },
+    { "id": 5, "userName": "홍길동5", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  },
+    { "id": 6, "userName": "홍길동6", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  },
+    { "id": 7, "userName": "홍길동7", "userImg": "/image/profile.jpg", "temp" :36.5, "location": "화성시 안녕동", "satisfaction" : 100, "dealReview" : [{"name" : "수학이술술", "loc" : "오산시 금앙동", "content": "감사합니다"}]  }
   ]
 }

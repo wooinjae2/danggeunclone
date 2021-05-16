@@ -36,6 +36,10 @@
     display: flex;
 }
 
+.userInfo_left:hover{
+    cursor: pointer;
+}
+
 .userInfo_left>div:first-child{
     padding: 0px 15px;
 }
@@ -81,6 +85,11 @@
     padding-bottom: 50px;
 }
 
+.desc_section>div:last-child,.desc_section>div:nth-child(2){
+    font-size: 13px;
+    color: #868e96
+}
+
 .main_img{
     max-width: 100%;
     min-width: 100%;
@@ -98,4 +107,9 @@
 
         left: 0%;
       }
+}
+
+.item_price{
+    font-weight: bold;
+    
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useRouter } from "next/router";
+import Link from 'next/link';
 import { useEffect, useRef, useState } from "react";
 import Card from "../../components/Card";
 import Item from "../../components/item";
@@ -8,6 +9,7 @@ import styles from "./article.module.css";
 export default function articles() {
   const [data, setData] = useState({});
   const [imgIndex, setImgIndex] = useState(0);
+  const [userInfo, setUserInfo] = useState({});
   let slideRef = useRef();
 
   const [hotDataList, setHotDataList] = useState([]);
@@ -15,20 +17,48 @@ export default function articles() {
 
   const { id } = router.query;
   console.log("id출력1 :", id);
-  useEffect(() => {
+  useEffect(async () => {
     let { id } = router.query;
     console.log("id 출력2 : ", id);
     id = id ? id : "1";
-    axios.get(`http://localhost:4000/articles/${id}`).then((res) => {
-      console.log(res.data);
+    const res = await axios.get(`http://localhost:4000/articles/${id}`).then((res) => {
       setData(res.data);
+      return res.data;
     });
+
+    
+
+    if(res){
+        await axios.get(`http://localhost:4000/users/${res.userId}`).then((res) => {
+          console.log('user Info user Info ', res.data);
+        });
+    }
+    
 
     axios.get(`http://localhost:4000/articles`).then((res) => {
       console.log(res.data);
       setHotDataList(res.data);
     });
   }, []);
+
+  useEffect(async ()=>{
+    if(id){
+        const res = await axios.get(`http://localhost:4000/articles/${id}`).then((res) => {
+            console.log('ddddddddddsadasdasdasd', res.data);
+            setData(res.data);
+            setImgIndex(0);
+            return res.data;
+          });
+        console.log('dddddddddddddddd');
+        if(res){
+            await axios.get(`http://localhost:4000/users/${res.userId}`).then((res) => {
+            console.log('idChange user Info user Info ', res.data);
+            setUserInfo(res.data);
+        });
+        }
+    }
+    
+  }, id)
 
   const onClickMove = (param) => {
       if(param==='left'){
@@ -52,10 +82,6 @@ export default function articles() {
   }, [imgIndex]);
 
 
-  
-
-  console.log(imgIndex)
-
   return (
     <div className={styles.article_wrapper}>
       <div className={styles.img_section}>
@@ -74,18 +100,11 @@ export default function articles() {
         ></div>
         <div className={styles.slideWrapper}>
           <div ref={slideRef} className={styles.slider}>
-            <img
-              className={styles.main_img}
-              src={`${data.src ? data.src[1] : ""}`}
-            ></img>
-            <img
-              className={styles.main_img}
-              src={`${data.src ? data.src[0] : ""}`}
-            ></img>
-            <img
-              className={styles.main_img}
-              src={`${data.src ? data.src[2] : ""}`}
-            ></img>
+            {data.src
+              ? data.src.map((src, idx) => (
+                  <img key={idx} className={styles.main_img} src={src}></img>
+                ))
+              : null}
           </div>
         </div>
         <div
@@ -103,27 +122,32 @@ export default function articles() {
         ></div>
       </div>
       <div className={styles.user_info_section}>
-        <div className={styles.userInfo_left}>
-          <div>
-            <img src={`${data.src ? data.src[0] : null}`}></img>
+        <Link href={`/users/${userInfo.id}`}>
+          <div className={styles.userInfo_left}>
+            <div>
+              {/* <img src={`${data.src ? data.src[0] : null}`}></img> */}
+              <img src={userInfo.userImg}></img>
+            </div>
+            <div>
+              <div>{userInfo.userName}</div>
+              <div>{userInfo.location}</div>
+            </div>
           </div>
-          <div>
-            <div>단대민턴</div>
-            <div>성남시 수정구 태평동</div>
-          </div>
-        </div>
-        <div className="userInfo_right">48.4</div>
+        </Link>
+
+        <div className="userInfo_right">{userInfo.temp}</div>
       </div>
 
       <div className={styles.desc_section}>
         <div className="desc_header">
-          <h1>성남용달</h1>
+          <h1>{data.title}</h1>
         </div>
         <div>지역업체 소개 : 24시간 전</div>
-        <div> 30,000원</div>
+        <div className={styles.item_price}> 30,000원</div>
         <div className="content">
-          <p>당근용달 성남용달 성남이사 모든물건 소중히 안전하고 신속하게 운송해
-          드립니다
+          <p>
+            당근용달 성남용달 성남이사 모든물건 소중히 안전하고 신속하게 운송해
+            드립니다
           </p>
         </div>
 
