@@ -12,6 +12,11 @@
 
 }
 
+
+.header_left img{
+    cursor: pointer;
+}
+
 .header_left div{
     padding-left: 30px;
     display: flex;

@@ -8,6 +8,15 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header />
       <Component {...pageProps} />
+      <style jsx>{`
+        .body {
+          backgroundColor: white;
+        }
+        .container :global(.btn) {
+          background: #000;
+          color: #fff;
+        }
+      `}</style>
       <Footer/>
     </>
   );

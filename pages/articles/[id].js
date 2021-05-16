@@ -115,15 +115,16 @@ export default function articles() {
         <div className="userInfo_right">48.4</div>
       </div>
 
-      <div className="desc_section">
+      <div className={styles.desc_section}>
         <div className="desc_header">
-          <h1>성남용달 성남용달 성남용달</h1>
+          <h1>성남용달</h1>
         </div>
         <div>지역업체 소개 : 24시간 전</div>
         <div> 30,000원</div>
         <div className="content">
-          당근용달 성남용달 성남이사 모든물건 소중히 안전하고 신속하게 운송해
+          <p>당근용달 성남용달 성남이사 모든물건 소중히 안전하고 신속하게 운송해
           드립니다
+          </p>
         </div>
 
         <div>채팅 0 관심 0 조회 0</div>
