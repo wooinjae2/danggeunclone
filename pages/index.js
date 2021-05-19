@@ -17,7 +17,7 @@ export default function Home() {
   },[])
 
   return (
-    <div>
+    <div style={{padding: '100px 0px;'}}>
       <Card title="중고거래" contentSortType="column">
         {itemList.map((data) => {
           return <Item key={data.id} data={data} />;
